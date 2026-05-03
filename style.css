@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  background: linear-gradient(135deg, #ffd6e0, #d0f4de, #cde7ff);
+  color: #333;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(12px);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff4fd8;
+}
+
+/* PAGE STYLE (EACH SECTION LOOKS LIKE A PAGE) */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+}
+
+/* CARD STYLE */
+.box {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(15px);
+
+  padding: 30px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 900px;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+/* HOME LAYOUT */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* IMAGE */
+.home img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #ff4fd8;
+  transition: 0.3s;
+}
+
+.home img:hover {
+  transform: scale(1.08);
+}
+
+/* TEXT */
+h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+h2 {
+  color: #ff4fd8;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+}
